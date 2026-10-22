@@ -1,6 +1,10 @@
 @use '../styles/variables' as *;
 
 .footer {
+    &__bg{
+        background: $color-bg-light;
+    }
+
   &__main {
     display: flex;
     gap: 80px;

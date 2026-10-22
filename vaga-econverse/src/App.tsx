@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import Partners from './components/Partners'
 import Brands from './components/Brands'
+import Newsletter from './components/Newsletter'
+import Footer from './components/Footer'
 import Categories from './components/Categories'
 import Showcase from './components/Showcase'
 import localData from './data/product.json'
@@ -39,6 +41,9 @@ function App() {
         <Brands />
         <Showcase title="Produtos relacionados" products={products} onSelect={setSelected} />
       </main>
+
+      <Newsletter />
+      <Footer/>
 
       {selected && <ProductModal product={selected} onClose={() => setSelected(null)} />}
     </>
