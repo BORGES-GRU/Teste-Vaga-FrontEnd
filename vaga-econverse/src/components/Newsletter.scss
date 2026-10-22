@@ -1,0 +1,80 @@
+@use '../styles/variables' as *;
+
+.newsletter {
+  margin-top: 90px;
+  background: $color-dark;
+  color: $color-white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    max-width: 520px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__fields {
+    display: flex;
+    gap: 8px;
+
+    input {
+      width: 233px;
+      height: 41px;
+      padding: 0 16px;
+      border: none;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    button {
+      width: 157px;
+      height: 41px;
+      border: none;
+      border-radius: 5px;
+      background: $color-yellow;
+      color: $color-dark;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  &__terms {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  &__success {
+    margin-top: 8px;
+    font-size: 14px;
+    color: $color-yellow;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
