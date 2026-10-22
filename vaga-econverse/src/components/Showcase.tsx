@@ -9,9 +9,10 @@ type ShowcaseProps = {
   title: string
   products: Product[]
   onSelect: (product: Product) => void
+  showTabs?: boolean
 }
 
-function Showcase({ title, products, onSelect }: ShowcaseProps) {
+function Showcase({ title, products, onSelect, showTabs = false }: ShowcaseProps) {
   const [activeTab, setActiveTab] = useState('Celular')
   const trackRef = useRef<HTMLUListElement>(null)
 
@@ -25,18 +26,22 @@ function Showcase({ title, products, onSelect }: ShowcaseProps) {
     <section className="showcase" id="produtos">
       <h2 className="showcase__title">{title}</h2>
 
-      <div className="showcase__tabs">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            type="button"
-            className={tab === activeTab ? 'showcase__tab showcase__tab--active' : 'showcase__tab'}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
+      {showTabs ? (
+        <div className="showcase__tabs">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              type="button"
+              className={tab === activeTab ? 'showcase__tab showcase__tab--active' : 'showcase__tab'}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+      ) : (<a href="#" className="showcase__see-all">Ver todos</a>
+
+     )}
 
       <div className="showcase__carousel">
         <button

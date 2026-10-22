@@ -5,11 +5,35 @@
   margin: 60px auto 0;
   padding: 0 70px;
 
-  &__title {
+    &__title {
+    display: flex;
+    align-items: center;
+    gap: 30px;
     font-size: 30px;
     font-weight: 700;
-    text-align: center;
     color: $color-blue;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #dcdcdc;
+    }
+  }
+
+  &__see-all {
+    display: block;
+    width: fit-content;
+    margin: 4px auto 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-dark;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-blue;
+    }
   }
 
   &__tabs {
