@@ -1,6 +1,11 @@
 @use '../styles/variables' as *;
 
 .card {
+    &__old-price {
+    font-size: 14px;
+    color: $color-gray;
+    text-decoration: line-through;
+  }
   display: flex;
   flex-direction: column;
   gap: 6px;
