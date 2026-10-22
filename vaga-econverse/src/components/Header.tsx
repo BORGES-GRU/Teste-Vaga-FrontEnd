@@ -1,12 +1,12 @@
 import logo from "../assets/Logo.png"
-import seguro from "..assets/icons/seguro.png"
-import frete from "./assets/icons/frete.png"
-import cartao from "./assets/icons/cartao.png"
-import busca from "./assets/icons/busca.png"
-import pedidos from "./assets/icons/pedidos.png"
-import favoritos from "./assets/icons/favoritos.png"
-import conta from "./assets/icons/conta.png"
-import carrinho from ",/assets/icons/carrinho.png"
+import seguro from "../assets/icons/seguro.png"
+import frete from "../assets/icons/frete.png"
+import cartao from "../assets/icons/cartao.png"
+import busca from "../assets/icons/busca.png"
+import pedidos from "../assets/icons/pedidos.png"
+import favoritos from "../assets/icons/favoritos.png"
+import conta from "../assets/icons/conta.png"
+import carrinho from "../assets/icons/carrinho.png"
 import './Header.scss'
 
 const menu = ['Todas Categorias', 'Supermercado', 'Livros', 'Moda', 'Lançamentos', 'Ofertas do dia']
