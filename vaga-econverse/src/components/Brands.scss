@@ -1,0 +1,38 @@
+@use '../styles/variables' as *;
+
+.brands {
+  max-width: 1280px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: $color-blue;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 42px;
+    margin-top: 30px;
+    list-style: none;
+  }
+
+  &__item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 214px;
+    height: 214px;
+    border-radius: 50%;
+    background: $color-bg-light;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
