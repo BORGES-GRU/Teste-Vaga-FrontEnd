@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import type {Product} from "./types/product"
+import type { Product } from "./types/product"
+import ProductCard from './components/ProductCard'
 
 const URL =
   'https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json'
@@ -14,17 +15,15 @@ function App() {
 
   }, [])
 
-return (
-<>
-  <h1>Produtos</h1>
-  <ul>
-    {products.map((product) => (
-      <li key={product.productName}>{product.productName}</li>
-    )  )}
-  </ul>
-</>
+  return (
+    <div>
+      <h1>Produtos</h1>
+      {products.map((product) => (
+        <ProductCard key={product.productName} product={product} />
+      ))}
+    </div>
 
-)
+  )
 
 
 }
