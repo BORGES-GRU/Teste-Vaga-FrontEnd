@@ -44,7 +44,8 @@
 
   &__item:hover &__icon,
   &__item--active &__icon {
-    background: #e7e6f6;
+    background: $color-white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 
   &__item--active &__label {

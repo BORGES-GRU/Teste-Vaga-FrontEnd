@@ -36,11 +36,10 @@
     }
   }
 
-  &__tabs {
+    &__tabs {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 900px;
-    margin: 16px auto 30px;
+    margin: 16px 0 30px;
     border: 1px solid #dcdcdc;
   }
 
