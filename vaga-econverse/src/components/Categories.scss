@@ -1,0 +1,54 @@
+@use '../styles/variables' as *;
+
+.categories {
+  max-width: 1160px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    list-style: none;
+    overflow-x: auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    border: none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 128px;
+    border-radius: 8px;
+    background: $color-bg-light;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__item:hover &__icon,
+  &__item--active &__icon {
+    background: #e7e6f6;
+  }
+
+  &__item--active &__label {
+    color: $color-primary;
+    font-weight: 600;
+  }
+}
