@@ -1,6 +1,32 @@
 @use '../styles/variables' as *;
 
 .newsletter {
+
+    @media (max-width: $tablet) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__form {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__fields {
+      flex-direction: column;
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+
   margin-top: 90px;
   background: $color-dark;
   color: $color-white;

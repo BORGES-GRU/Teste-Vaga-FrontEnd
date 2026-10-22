@@ -1,6 +1,39 @@
 @use '../styles/variables' as *;
 
 .header {
+    @media (max-width: $tablet) {
+    &__main {
+      flex-wrap: wrap;
+      height: auto;
+      gap: 12px;
+      padding: 12px 0;
+    }
+
+    &__search {
+      order: 3;
+      flex: 1 1 100%;
+      max-width: none;
+    }
+
+    &__menu {
+      gap: 24px;
+      padding: 12px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__benefits {
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      font-size: 11px;
+    }
+
+    &__icons {
+      gap: 12px;
+    }
+  }
     &__benefits li {
     display: inline-flex;
     align-items: center;

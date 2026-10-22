@@ -1,14 +1,9 @@
 @use '../styles/variables' as *;
 
 .card {
-    &__old-price {
-    font-size: 14px;
-    color: $color-gray;
-    text-decoration: line-through;
-  }
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  width: 100%;
   padding: 20px 12px 16px;
   border-radius: 8px;
   background: $color-white;
@@ -21,35 +16,53 @@
   }
 
   &__name {
-    flex: 1;
+    min-height: 46px;
+    margin-top: 12px;
     font-size: 15px;
     font-weight: 300;
+    line-height: 23px;
+    color: $color-text;
+  }
+
+  &__old-price {
+    margin-top: 10px;
+    font-size: 14px;
+    color: $color-gray;
+    text-decoration: line-through;
   }
 
   &__price {
     font-size: 20px;
     font-weight: 700;
-    color: #3f3f40;
+    color: #2f2f2f;
   }
 
   &__installments {
     font-size: 12px;
+    color: $color-text;
   }
 
   &__shipping {
+    margin: 4px 0 12px;
     font-size: 12px;
     color: $color-blue;
   }
 
   &__buy {
+    margin-top: auto;
     height: 44px;
-    margin-top: 8px;
     border: none;
     border-radius: 4px;
     background: $color-blue;
     color: $color-white;
+    font-family: inherit;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }

@@ -1,6 +1,46 @@
 @use '../styles/variables' as *;
 
 .showcase {
+
+    @media (max-width: $tablet) {
+    padding: 0 20px;
+
+    &__slide {
+      flex-basis: calc((100% - 20px) / 2);
+    }
+
+    &__arrow--prev {
+      left: -10px;
+    }
+
+    &__arrow--next {
+      right: -10px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__title {
+      gap: 12px;
+      font-size: 22px;
+    }
+
+    &__tabs {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__tab {
+      font-size: 13px;
+    }
+
+    &__slide {
+      flex-basis: 85%;
+    }
+
+    &__arrow {
+      display: none;
+    }
+  }
+
   max-width: 1280px;
   margin: 60px auto 0;
   padding: 0 70px;
@@ -85,11 +125,11 @@
     }
   }
 
-  &__slide {
+    &__slide {
+    display: flex;
     flex: 0 0 calc((100% - 60px) / 4);
     scroll-snap-align: start;
   }
-
   &__arrow {
     position: absolute;
     top: 50%;
@@ -118,3 +158,4 @@
     }
   }
 }
+

@@ -1,6 +1,25 @@
 @use '../styles/variables' as *;
 
 .footer {
+
+    @media (max-width: $tablet) {
+    &__main {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__brand {
+      flex: none;
+      border-right: none;
+    }
+
+    &__columns {
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-top: 0;
+    }
+  }
+
     &__bg{
         background: $color-bg-light;
     }

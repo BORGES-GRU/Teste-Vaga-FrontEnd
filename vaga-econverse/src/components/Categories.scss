@@ -1,6 +1,18 @@
 @use '../styles/variables' as *;
 
 .categories {
+
+    @media (max-width: $mobile) {
+    &__icon {
+      width: 96px;
+      height: 96px;
+    }
+
+    &__label {
+      font-size: 12px;
+    }
+  }
+
   max-width: 1160px;
   margin: 40px auto 0;
   padding: 0 20px;
