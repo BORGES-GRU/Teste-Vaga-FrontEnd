@@ -4,7 +4,7 @@ import tecnologia from '../assets/icons/tecnologia.png'
 import supermercado from '../assets/icons/supermercado.png'
 import bebidas from '../assets/icons/bebidas.png'
 import ferramentas from '../assets/icons/ferramentas.png'
-import saude from '../assets/icons/saúde.png'
+import saude from '../assets/icons/saude.png'
 import esportes from '../assets/icons/esportes.png'
 import moda from '../assets/icons/moda.png'
 
@@ -15,7 +15,7 @@ const categories = [
     { label: 'Bebidas', icon: bebidas },
     { label: 'Ferramentas', icon: ferramentas },
     { label: 'Saúde', icon: saude },
-    { label: 'Esportes', icon: esportes },
+    { label: 'Esportes e Fitness', icon: esportes },
     { label: 'Moda', icon: moda },
 ]
 
