@@ -7,6 +7,7 @@ import pedidos from "../assets/icons/pedidos.png"
 import favoritos from "../assets/icons/favoritos.png"
 import conta from "../assets/icons/conta.png"
 import carrinho from "../assets/icons/carrinho.png"
+import coroa from "../assets/icons/coroa.png"
 import './Header.scss'
 
 const menu = ['Todas Categorias', 'Supermercado', 'Livros', 'Moda', 'Lançamentos', 'Ofertas do dia']
@@ -56,7 +57,10 @@ function Header() {
             {item}
           </a>
         ))}
-        <a href="#" className="header__subscription">Assinatura</a>
+        <a href="#" className="header__subscription">
+          <img src={coroa} alt="" width={18} height={18} />
+          Assinatura
+        </a>
       </nav>
     </header>
   )
