@@ -16,11 +16,11 @@ function ProductCard({ product, onSelect }: Props) {
 
   return (
     <article className='card'>
-      <img className="card_image" src={product.photo} alt={product.productName} />
-      <h3 className="card_name">{product.productName}</h3>
+      <img className="card__image" src={product.photo} alt={product.productName} />
+      <h3 className="card__name">{product.productName}</h3>
       <span className="card__old-price">{formatPrice(price * 1.07)}</span>
-      <p className="card_price">{formatPrice(price)}</p>
-      <p className="card_installment">ou 2x de {formatPrice(installment)} sem juros</p>
+      <p className="card__price">{formatPrice(price)}</p>
+      <p className="card__installment">ou 2x de {formatPrice(installment)} sem juros</p>
        <p className="card__shipping">Frete grátis</p>
       <button type="button" className="card__buy" onClick={() => onSelect(product)}>
         Comprar
