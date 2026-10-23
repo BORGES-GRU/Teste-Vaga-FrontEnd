@@ -23,7 +23,7 @@ function Showcase({ title, products, onSelect, showTabs = false }: ShowcaseProps
   }
 
   return (
-    <section className="showcase" id="produtos">
+    <section className="showcase">
       <h2 className="showcase__title">{title}</h2>
 
       {showTabs ? (
