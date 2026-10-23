@@ -19,7 +19,7 @@ function ProductModal({ product, onClose }: Props) {
     return (
         <div className="modal" onClick={onClose}>
             <div className="modal__box" onClick={(e) => e.stopPropagation()}>
-                <button type="button" className="modal__close" onClick={onClose}>
+                <button type="button" className="modal__close" onClick={onClose} aria-label="Fechar">
                     x
                 </button>
 
@@ -42,10 +42,6 @@ function ProductModal({ product, onClose }: Props) {
                         </div>
                         <button type="button" className="modal__buy">
                             Comprar
-                        </button>
-
-                        <button type="button" className="modal__close" onClick={onClose} aria-label="Fechar">
-                            x
                         </button>
                     </div>
                 </div>
