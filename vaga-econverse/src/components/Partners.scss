@@ -2,21 +2,6 @@
 
 .partners {
 
-    @media (max-width: $tablet) {
-    grid-template-columns: 1fr;
-  }
-
-  @media (max-width: $mobile) {
-    &__card {
-      height: 260px;
-      padding: 0 24px;
-    }
-
-    &__title {
-      font-size: 30px;
-    }
-  }
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
@@ -64,4 +49,20 @@
     text-decoration: none;
     letter-spacing: 1px;
   }
+
+   @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile) {
+    &__card {
+      height: 260px;
+      padding: 0 24px;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+  }
+
 }
