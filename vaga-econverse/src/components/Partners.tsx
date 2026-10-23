@@ -6,7 +6,7 @@ function Partners() {
             {[1, 2].map((item) => (
                 <article key={item} className="partners__card">
                     <h3 className="partners__title">Parceiros</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                    <p className="partners__text">Lorem ipsum dolor sit amet, consectetur</p>
                     <a href="#" className="partners__button">Confira</a>
                 </article>
             ))}
