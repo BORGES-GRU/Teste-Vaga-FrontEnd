@@ -26,28 +26,33 @@ function ProductModal({ product, onClose }: Props) {
                 <img className="modal__image" src={product.photo} alt={product.productName} />
 
                 <div className="modal__info">
-                    <h2>{product.productName}</h2>
+                    <h2 className="modal__title">{product.productName}</h2>
                     <p className="modal__price">{price}</p>
-                    <p>{product.descriptionShort}</p>
-                </div>
+                    <p className="modal__description">{product.descriptionShort}</p>
 
-                <div className="modal__actions">
-                    <div className="quantity">
-                        <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))}>
-                            -
+                    <div className="modal__actions">
+                        <div className="quantity">
+                            <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))}>
+                                -
+                            </button>
+                            <span>{String(quantity).padStart(2, '0')}</span>
+                            <button type="button" onClick={() => setQuantity(quantity + 1)}>
+                                +
+                            </button>
+                        </div>
+                        <button type="button" className="modal__buy">
+                            Comprar
                         </button>
-                        <span>{String(quantity).padStart(2, '0')}</span>
-                        <button type="button" onClick={() => setQuantity(quantity + 1)}>
-                            +
+
+                        <button type="button" className="modal__close" onClick={onClose} aria-label="Fechar">
+                            x
                         </button>
                     </div>
-                    <button type="button" className="modal__buy">
-                        Comprar
-                    </button>
                 </div>
+
             </div>
         </div>
     )
 }
 
-            export default ProductModal
+export default ProductModal
