@@ -4,7 +4,7 @@ Página de e-commerce feita em React + TypeScript com Sass, seguindo o layout do
 
 ## Tecnologias
 
-- React 18 + TypeScript
+- React 19 + TypeScript
 - Vite
 - Sass (SCSS com variáveis e BEM)
 
